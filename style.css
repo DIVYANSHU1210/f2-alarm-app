@@ -1,0 +1,168 @@
+
+*{
+    color: white;
+}
+body{
+    background-color: #1D1D23;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.set-alarm{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #34344A;
+    border-radius: 10px;
+}
+
+
+.set-alarm>div{
+    margin-inline: 20px ;
+}
+.alarm-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+input::placeholder{
+    color: aliceblue;
+}
+
+#curr{
+    background-color: #34344A;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 20px;
+}
+
+button{
+    background-color: #f0f757;
+    border: none;
+    border-radius: 10px;
+    padding-inline: 20px ;
+    height: 20px;
+    color: black;
+}
+
+
+.vanish{
+    display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.timer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #34344A;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.timer>div{
+    margin-inline: 20px ;
+}
+
+#alarm-time {
+    font-size: 30px;
+}
+
+
+.yellow-card{
+    background-color: #de1f0a !important;
+    color: #010118 !important;
+    padding: 10px;
+    height: 40px;
+}
+
+
+/* <!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Timer</title>
+</head>
+<body>
+    <h1>Custom Timer</h1>
+    <label for="timeInput">Enter time (hh:mm:ss):</label>
+    <input type="text" id="timeInput">
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+
+    <div id="timer"></div>
+
+    <script>
+        let timerInterval;
+        let totalSeconds = 0;
+
+        function updateTimerDisplay() {
+            const timerDisplay = document.getElementById('timer');
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            timerDisplay.textContent = `Time: ${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+        }
+
+        function formatTime(time) {
+            return time < 10 ? `0${time}` : `${time}`;
+        }
+
+        function startTimer() {
+            const timeInput = document.getElementById('timeInput').value;
+            const timeArray = timeInput.split(':');
+            
+            if (timeArray.length === 3) {
+                const hours = parseInt(timeArray[0]);
+                const minutes = parseInt(timeArray[1]);
+                const seconds = parseInt(timeArray[2]);
+                
+                if (!isNaN(hours) && !isNaN(minutes) && !isNaN(seconds)) {
+                    totalSeconds = hours * 3600 + minutes * 60 + seconds;
+                    updateTimerDisplay();
+                    
+                    timerInterval = setInterval(function () {
+                        if (totalSeconds > 0) {
+                            totalSeconds--;
+                            updateTimerDisplay();
+                        } else {
+                            clearInterval(timerInterval);
+                            alert('Timer expired!');
+                        }
+                    }, 1000);
+                } else {
+                    alert('Invalid time format. Please enter time in hh:mm:ss format.');
+                }
+            } else {
+                alert('Invalid time format. Please enter time in hh:mm:ss format.');
+            }
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        startButton.addEventListener('click', startTimer);
+        stopButton.addEventListener('click', stopTimer);
+    </script>
+</body>
+</html> */
